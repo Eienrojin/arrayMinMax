@@ -50,13 +50,11 @@ int getMinNum(int* arrayMinMax)
 	int minNum = arrayMinMax[0];
 	for (int i = 0; i < LENGTH; i++)
 	{
-		if (arrayMinMax[i] < minNum || arrayMinMax[i] == minNum)
+		if (arrayMinMax[i] <= minNum)
 		{
 			minNum = arrayMinMax[i];
-
 			countCheapBook++;
 		}
 	}
-
 	return minNum;
 }
