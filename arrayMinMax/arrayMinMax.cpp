@@ -12,17 +12,20 @@ int countCheapBook = 0;
 void fillRandArray();
 void printArray();
 int getMinNum(int *arrayMinMax);
+void trash();
 
 
 int main()
 {
 	setlocale(LC_ALL, "RUS");
 
-    fillRandArray();
+    	fillRandArray();
 	printArray();
 
 	cout << endl << "Минимальное число: " << getMinNum(arrayMinMax);
 	cout << endl << "Количество самых дешевых книг: " << countCheapBook;
+	
+	trash();
 
 }
 
@@ -57,4 +60,9 @@ int getMinNum(int* arrayMinMax)
 		}
 	}
 	return minNum;
+}
+
+void trash()
+{
+	delete[] arrayMinMax;
 }
